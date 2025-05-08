@@ -1,0 +1,82 @@
+@use "variables";
+
+main {
+    margin-top: variables.$margin-top-main;
+    background-color: variables.$background-color;
+
+
+    .primeraParte {
+        @include variables.flex(column, wrap, center, center);
+        padding: 15px;
+    }
+
+    .imagen-principal {
+        width: max-content;
+    }
+
+    .segundaParte {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: center;
+    }
+
+    .imgTxt {
+        display: flex;
+        align-items: center;
+    }
+
+    .mapaNosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divFiltro {
+        list-style: none;
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 20px;
+        padding: 20px;
+        background-color: variables.$background-color;
+        border-radius: 10px;
+    }
+
+    .imgProducto1,
+    .imgProducto2,
+    .imgProducto3,
+    .imgProducto4,
+    .imgProducto5,
+    .imgProducto6 {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 10px;
+
+    }
+
+    .p-productos {
+        border-top: 1px solid black;
+        text-align: center;
+    }
+
+
+    .imagen-principal {
+        @include variables.aparecerConEstilo();
+    }
+
+}

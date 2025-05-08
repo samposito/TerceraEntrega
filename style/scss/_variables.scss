@@ -1,0 +1,43 @@
+// Colores
+$primary-color: #1d2d44;
+$secondary-color: #b5e2fb;
+$text-color: #000000b0;
+$background-color: #fff;
+$espacio-auto: auto;
+$background-color-btn: aqua;
+
+// Espaciados
+$padding-main: 40px;
+$margin-top-main: 10rem;
+$content-body: fit-content;
+
+// Mixins reutilizables
+@mixin flex($direction, $wrap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@keyframes aparecerConEstilo {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@mixin aparecerConEstilo($duracion: 0.8s, $delay: 0s, $modo: ease-out) {
+  opacity: 0;
+  animation: aparecerConEstilo $duracion $modo $delay forwards;
+}
+
+
+
+
+
+
